@@ -1,57 +1,173 @@
-html, body {
-    height: 100%;
+$base-color: #575757;
+$calc-display: #919191;
+$calc-buttons: #b091c2;
+$accent-buttons: #9e74b6;
+
+$bmo-primary: #63bda4;
+$bmo-light: #c0eed4;
+$bmo-blue: #5ddfee;
+$bmo-red: #f20553;
+$bmo-yellow: #ffec47;
+$bmo-yellow-light: #fdf397;
+$bmo-navy: #1d1e68;
+$bmo-navy-light: #15164b;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #e7e7e7;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+button {
+  border: none;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 1rem;
 }
 
-.calculator {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(190, 190, 190);
-    border-radius: 0.5rem;
-    width: 500px;
-    height: 700px;
-    padding: 1rem;
+.bmo {
+  display: flex;
+  flex-direction: column;
+  background-color: $bmo-primary;
+  border-radius: 2rem;
+  width: 500px;
+  height: 900px;
+  padding: 2rem;
 }
 
-.display {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: aquamarine;
-    height: 100px;
-    padding: 1rem;
-    border-radius: 1rem;
+.bmo-display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: $bmo-light;
+  height: 200px;
+  padding: 1rem;
+  font-size: 2.5rem;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    background-image: url("bmo19.jpg");
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-repeat: no-repeat;
+    background-size: 450px;
+    background-position: 0% 30%;
+    opacity: 0.4;
+  }
+}
+
+.display-nums {
+  align-self: flex-end;
+  color: #333;
+}
+
+.bmo-text {
+  font-size: 0;
+  text-align: center;
+  margin-top: 0.8rem;
+
+  span {
+    font-size: 3rem;
+
+    &:nth-child(1) {
+      color: $bmo-yellow;
+    }
+
+    &:nth-child(2) {
+      color: $bmo-red;
+    }
+
+    &:nth-child(3) {
+      color: $bmo-blue;
+    }
+  }
 }
 
 .function-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .numpad-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .numpad-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: aquamarine;
-    width: 100px;
-    height: 100px;
-    margin-top: 1rem;
-    border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $calc-buttons;
+  width: 100px;
+  height: 100px;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+
+.bmo-yellow {
+  color: $bmo-navy;
+  background-color: $bmo-yellow;
+  transition: 300ms ease;
+
+  &:hover {
+    background-color: $bmo-yellow-light;
+  }
+}
+
+.bmo-blue {
+  color: #333;
+  background-color: $bmo-blue;
+}
+
+.bmo-navy {
+  background-color: $bmo-navy;
+  color: #fff;
+  transition: 300ms ease;
+
+  &:hover {
+    background-color: $bmo-navy-light;
+  }
+}
+
+.bmo-green {
+  color: #333;
+  background-color: rgb(72, 233, 112);
+}
+
+.bmo-red {
+  color: #fff;
+  background-color: $bmo-red;
 }
 
 .grow {
-    flex: 2;
+  flex: 2;
+  height: 50px;
+  background-color: $accent-buttons;
+  color: #fff;
 }

@@ -1,5 +1,24 @@
-html, body {
+html,
+body {
   height: 100%;
+}
+
+body {
+  background-color: #e7e7e7;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+button {
+  border: none;
 }
 
 .container {
@@ -7,26 +26,66 @@ html, body {
   justify-content: center;
   align-items: center;
   height: 100%;
+  gap: 1rem;
 }
 
-.calculator {
+.bmo {
   display: flex;
   flex-direction: column;
-  background-color: rgb(190, 190, 190);
-  border-radius: 0.5rem;
+  background-color: #63bda4;
+  border-radius: 2rem;
   width: 500px;
-  height: 700px;
-  padding: 1rem;
+  height: 900px;
+  padding: 2rem;
 }
 
-.display {
+.bmo-display {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: aquamarine;
-  height: 100px;
+  background-color: #c0eed4;
+  height: 200px;
   padding: 1rem;
+  font-size: 2.5rem;
   border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.bmo-display::after {
+  content: "";
+  background-image: url("bmo19.jpg");
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-repeat: no-repeat;
+  background-size: 450px;
+  background-position: 0% 30%;
+  opacity: 0.4;
+}
+
+.display-nums {
+  align-self: flex-end;
+  color: #333;
+}
+
+.bmo-text {
+  font-size: 0;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+.bmo-text span {
+  font-size: 3rem;
+}
+.bmo-text span:nth-child(1) {
+  color: #ffec47;
+}
+.bmo-text span:nth-child(2) {
+  color: #f20553;
+}
+.bmo-text span:nth-child(3) {
+  color: #5ddfee;
 }
 
 .function-container {
@@ -45,15 +104,51 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aquamarine;
+  background-color: #b091c2;
   width: 100px;
   height: 100px;
   margin-top: 1rem;
   border-radius: 1rem;
 }
 
+.bmo-yellow {
+  color: #1d1e68;
+  background-color: #ffec47;
+  transition: 300ms ease;
+}
+.bmo-yellow:hover {
+  background-color: #fdf397;
+}
+
+.bmo-blue {
+  color: #333;
+  background-color: #5ddfee;
+}
+
+.bmo-navy {
+  background-color: #1d1e68;
+  color: #fff;
+  transition: 300ms ease;
+}
+.bmo-navy:hover {
+  background-color: #15164b;
+}
+
+.bmo-green {
+  color: #333;
+  background-color: rgb(72, 233, 112);
+}
+
+.bmo-red {
+  color: #fff;
+  background-color: #f20553;
+}
+
 .grow {
   flex: 2;
+  height: 50px;
+  background-color: #9e74b6;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
